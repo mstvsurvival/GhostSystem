@@ -1,0 +1,11 @@
+name: Ghostsystem
+version: '1.0'
+main: de.ghost.ghostsystem.Ghostsystem
+api-version: '1.20'
+commands:
+  meinschwert:
+    permission: ghostsys.meinschwert
+  adminitems:
+    permission: ghostsys.adminitems
+
+

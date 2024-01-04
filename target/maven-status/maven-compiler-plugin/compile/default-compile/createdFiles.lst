@@ -1,0 +1,5 @@
+de\ghost\ghostsystem\commands\TestCommand.class
+de\ghost\ghostsystem\Listerners\BlockListeners.class
+de\ghost\ghostsystem\Listerners\ConnectionListeners.class
+de\ghost\ghostsystem\commands\AdminItemsCommand.class
+de\ghost\ghostsystem\Ghostsystem.class
