@@ -17,9 +17,9 @@ public class Ghostsystem extends JavaPlugin {
     private static Config cfg;
     @Override
     public void onEnable() {
-        getCommand("meinschwert").setExecutor(new MeinSchwert());
-        getCommand("adminitems").setExecutor(new AdminItemsCommand());
-        getCommand("warp").setExecutor(new WarpCommand());
+        Objects.requireNonNull(getCommand("meinschwert")).setExecutor(new MeinSchwert());
+        Objects.requireNonNull(getCommand("adminitems")).setExecutor(new AdminItemsCommand());
+        Objects.requireNonNull(getCommand("warp")).setExecutor(new WarpCommand());
 
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new ConnectionListeners(), this);
