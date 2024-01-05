@@ -66,4 +66,3 @@ public class Config {
         return configuration.getKeys(false).size() == 0;
     }
 }
-

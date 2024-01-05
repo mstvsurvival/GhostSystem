@@ -22,6 +22,6 @@ public class ConnectionListeners implements Listener {
     @EventHandler
     public void onLeft(PlayerQuitEvent event) {
         Player player = event.getPlayer();
-        event.setQuitMessage(ChatColor.GRAY + player.getName() + "[-]");
+        event.setQuitMessage(ChatColor.DARK_GRAY + "[-] " + ChatColor.YELLOW + player.getName());
     }
 }
