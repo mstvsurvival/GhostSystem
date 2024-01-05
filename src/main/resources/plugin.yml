@@ -7,5 +7,7 @@ commands:
     permission: ghostsys.meinschwert
   adminitems:
     permission: ghostsys.adminitems
+  warpcommand:
+    permission: warp.manage
 
 

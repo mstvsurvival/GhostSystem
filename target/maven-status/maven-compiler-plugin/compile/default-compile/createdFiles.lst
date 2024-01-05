@@ -1,5 +1,8 @@
-de\ghost\ghostsystem\commands\TestCommand.class
+de\ghost\ghostsystem\util\Config.class
+de\ghost\ghostsystem\warp\WarpManager.class
+de\ghost\ghostsystem\commands\MeinSchwert.class
 de\ghost\ghostsystem\Listerners\BlockListeners.class
 de\ghost\ghostsystem\Listerners\ConnectionListeners.class
 de\ghost\ghostsystem\commands\AdminItemsCommand.class
+de\ghost\ghostsystem\commands\WarpCommand.class
 de\ghost\ghostsystem\Ghostsystem.class
