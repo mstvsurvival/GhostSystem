@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class Listener implements org.bukkit.event.Listener {
@@ -50,4 +51,17 @@ public class Listener implements org.bukkit.event.Listener {
             }
         }.runTaskLater(Ghostsystem.getInstance() , 1);
     }
-}
+        @EventHandler
+        public void onRespawn(PlayerRespawnEvent e){
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    Player p = (Player) e.getPlayer();
+                    p.getScoreboard().getTeam("leben").setPrefix("§a" + Math.round(p.getHealth() * 100) /100);
+                }
+            }.runTaskLater(Ghostsystem.getInstance() , 1);
+        }
+    }
+
+
+
