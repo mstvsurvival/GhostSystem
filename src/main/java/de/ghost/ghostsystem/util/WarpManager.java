@@ -1,4 +1,4 @@
-package de.ghost.ghostsystem.warp;
+package de.ghost.ghostsystem.util;
 
 import de.ghost.ghostsystem.Ghostsystem;
 import org.bukkit.Location;

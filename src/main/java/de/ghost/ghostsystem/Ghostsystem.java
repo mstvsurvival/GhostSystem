@@ -15,8 +15,10 @@ import java.util.Objects;
 
 public class Ghostsystem extends JavaPlugin {
     private static Config cfg;
+    private static Ghostsystem instance;
     @Override
     public void onEnable() {
+        instance = this;
         getCommand("meinschwert").setExecutor(new MeinSchwert());
         getCommand("adminitems").setExecutor(new AdminItemsCommand());
         getCommand("warp").setExecutor(new WarpCommand());
@@ -37,6 +39,10 @@ public class Ghostsystem extends JavaPlugin {
 
     public static Config getCfg() {
         return cfg;
+    }
+
+    public static Ghostsystem getInstance() {
+        return instance;
     }
 }
 

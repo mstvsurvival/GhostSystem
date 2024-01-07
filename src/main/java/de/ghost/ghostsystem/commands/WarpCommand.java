@@ -1,6 +1,6 @@
 package de.ghost.ghostsystem.commands;
 
-import de.ghost.ghostsystem.warp.WarpManager;
+import de.ghost.ghostsystem.util.WarpManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
