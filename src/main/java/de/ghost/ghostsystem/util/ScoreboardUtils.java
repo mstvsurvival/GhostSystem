@@ -8,10 +8,12 @@ import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
+import java.util.Objects;
+
 public class ScoreboardUtils {
 
     public static Scoreboard getBaseScoreboard(Player player){
-        Scoreboard s = Bukkit.getScoreboardManager().getNewScoreboard();
+        Scoreboard s = Objects.requireNonNull(Bukkit.getScoreboardManager()).getNewScoreboard();
         Objective objective = s.registerNewObjective("main" , "main" , "§aGhostBuild.de");
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.getScore("§cweb.ghostbuild.de").setScore(0);

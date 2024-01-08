@@ -9,6 +9,16 @@ commands:
     permission: ghostsys.adminitems
   warp:
     permission: warp.manage
+  tpa:
+    description: TPA to a player
+  tpaccept:
+    description: Accept a TPA request
+  tpdeny:
+    description: Deny a TPA request
+  tpyes:
+    description: Alias for /tpaccept
+  tpno:
+    description: Alias for /tpdeny
 
 
 

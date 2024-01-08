@@ -5,6 +5,7 @@ import de.ghost.ghostsystem.Listerners.ConnectionListeners;
 import de.ghost.ghostsystem.commands.AdminItemsCommand;
 import de.ghost.ghostsystem.commands.MeinSchwert;
 import de.ghost.ghostsystem.commands.WarpCommand;
+import de.ghost.ghostsystem.tpa.*;
 import de.ghost.ghostsystem.util.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,6 +23,13 @@ public class Ghostsystem extends JavaPlugin {
         getCommand("meinschwert").setExecutor(new MeinSchwert());
         getCommand("adminitems").setExecutor(new AdminItemsCommand());
         getCommand("warp").setExecutor(new WarpCommand());
+        getCommand("tpa").setExecutor(new Tpa());
+        getCommand("tpdeny").setExecutor(new TpaDeny());
+        getCommand("tpaccept").setExecutor(new Tpaccept());
+        getCommand("tpahere").setExecutor(new Tpahere());
+        getCommand("tpview").setExecutor(new TpView());
+        getCommand("tpahere").setExecutor(new Tpahere());
+
 
         cfg = new Config("warps.yml" , getDataFolder());
         PluginManager pluginManager = Bukkit.getPluginManager();
