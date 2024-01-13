@@ -16,7 +16,6 @@ public class ConnectionListeners implements Listener {
     public void onJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         event.setJoinMessage(ChatColor.DARK_GRAY + "[+] " + ChatColor.YELLOW + player.getName());
-        player.getInventory().addItem(new ItemStack(Material.DIAMOND));
     }
 
     @EventHandler

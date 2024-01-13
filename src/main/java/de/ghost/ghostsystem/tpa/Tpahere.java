@@ -18,7 +18,7 @@ public class Tpahere implements CommandExecutor {
             Player player = (Player) sender;
             Player receiver = Bukkit.getPlayerExact(args[0]);
             tpQueue.TELEPORT_REQUESTS.put(receiver, new TpRequest(player, true));
-            receiver.sendMessage(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.GOLD + " hat dir eine Teleportations Anfrage geschickt!");
+            receiver.sendMessage(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.GOLD + " m#chte idch zu sich Teleportieren nutze /tpaccept to accept!");
             return true;
         }
         return false;

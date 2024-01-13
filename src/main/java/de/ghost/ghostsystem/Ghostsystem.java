@@ -5,6 +5,8 @@ import de.ghost.ghostsystem.Listerners.ConnectionListeners;
 import de.ghost.ghostsystem.commands.AdminItemsCommand;
 import de.ghost.ghostsystem.commands.MeinSchwert;
 import de.ghost.ghostsystem.commands.WarpCommand;
+import de.ghost.ghostsystem.sethome.HomeCommand;
+import de.ghost.ghostsystem.sethome.SetHomeCommand;
 import de.ghost.ghostsystem.tpa.*;
 import de.ghost.ghostsystem.util.Config;
 import org.bukkit.Bukkit;
@@ -28,7 +30,8 @@ public class Ghostsystem extends JavaPlugin {
         getCommand("tpaccept").setExecutor(new Tpaccept());
         getCommand("tpahere").setExecutor(new Tpahere());
         getCommand("tpview").setExecutor(new TpView());
-        getCommand("tpahere").setExecutor(new Tpahere());
+        getCommand("home").setExecutor(new HomeCommand());
+        getCommand("sethome").setExecutor(new SetHomeCommand());
 
 
         cfg = new Config("warps.yml" , getDataFolder());

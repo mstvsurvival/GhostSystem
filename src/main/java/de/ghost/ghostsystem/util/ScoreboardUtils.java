@@ -18,11 +18,11 @@ public class ScoreboardUtils {
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.getScore("§cweb.ghostbuild.de").setScore(0);
         objective.getScore("§a").setScore(1);
-        objective.getScore("§aDein Leben:").setScore(3);
-        objective.getScore("§a").setScore(4);
-        objective.getScore(player.isOp() ? "§cAdmin" : "§7Spieler").setScore(5);
-        objective.getScore("§cDein Rang:").setScore(6);
-        objective.getScore("§b").setScore(7);
+        objective.getScore("§aDein Leben:").setScore(2);
+        objective.getScore("§a").setScore(3);
+        objective.getScore(player.isOp() ? "§cAdmin" : "§7Spieler").setScore(4);
+        objective.getScore("§cDein Rang:").setScore(5);
+        objective.getScore("§b").setScore(6);
 
         Team t = s.registerNewTeam("leben");
         t.addEntry(ChatColor.AQUA + "" + ChatColor.RED);

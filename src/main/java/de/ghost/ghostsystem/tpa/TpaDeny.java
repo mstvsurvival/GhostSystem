@@ -17,7 +17,7 @@ public class TpaDeny implements CommandExecutor {
             Player player = (Player) sender;
             TpRequest tpRequest = tpQueue.TELEPORT_REQUESTS.get(player);
             if (tpRequest == null) {player.sendMessage(ChatColor.GOLD + "Du hast keine Teleportations Anfragen!"); return true;}
-            tpRequest.TpRequest.sendMessage(ChatColor.GOLD + player.getName() + " Der Spieler hat deine Teleportations Anfragen blockiert!");
+            tpRequest.TpRequest.sendMessage(ChatColor.GOLD + player.getName() + " Der Spieler hat deine Teleportations Anfragen abgelehnt!");
             tpQueue.TELEPORT_REQUESTS.remove(player);
             return true;
         }

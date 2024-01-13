@@ -20,7 +20,8 @@ public class Tpa implements CommandExecutor {
             Player receiver = Bukkit.getPlayerExact(args[0]);
             if (receiver == null) {return false;}
             TpQueue.TELEPORT_REQUESTS.put(receiver, new TpRequest(player, false));
-            receiver.sendMessage(ChatColor.RED + player.getName() + ChatColor.GOLD + " hat dir eine Teleportations Anfrage geschickt!");
+            player.sendMessage(ChatColor.GREEN + "Du hast " + player.getName() + " eine Teleportations Anfrage geschickt!");
+            receiver.sendMessage(ChatColor.RED + player.getName() + ChatColor.GOLD + " möchte sich zu dir Teleportieren!");
             return true;
         }
         return false;
