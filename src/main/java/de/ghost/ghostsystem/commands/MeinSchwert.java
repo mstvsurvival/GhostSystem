@@ -30,7 +30,8 @@ public class MeinSchwert implements CommandExecutor {
             lore.add(ChatColor.GRAY + "Das ist §amein Item!");
             lore.add(ChatColor.GRAY + ">> Wie macht man sowas?!");
             meta.setLore(lore);
-            meta.addEnchant(Enchantment.KNOCKBACK , 3 , true);
+            meta.addEnchant(Enchantment.KNOCKBACK , 100 , true);
+            meta.addEnchant(Enchantment.DAMAGE_ALL , 255 , true);
             stack.setItemMeta(meta);
             player.getInventory().addItem(stack);
         }else {

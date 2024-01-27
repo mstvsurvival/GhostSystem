@@ -7,22 +7,35 @@ commands:
     permission: ghostsys.meinschwert
   adminitems:
     permission: ghostsys.adminitems
-  warp:
-    permission: warp.manage
-  tpa:
-    description: TPA to a player
-  tpaccept:
-    description: Accept a TPA request
-  tpdeny:
-    description: Deny a TPA request
-  tpyes:
-    description: Alias for /tpaccept
-  tpno:
-    description: Alias for /tpdeny
   home:
-    permission: ghostsys.home
+    permission: ghostsys.homeport
   sethome:
     permission: ghostsys.sethome
+  heal:
+    description: Heilt Spieler
+  clearchat:
+    description: Clear den Chat
+  kopf:
+    description: erhalte den Kopf des Spielers
+  ping:
+    description: Pinge andere Spieler
+  fly:
+    description: Lasse andere Spieler fliegen
+  vanish:
+    description: Mache dich unsichrbar
+    aliases: [v]
+  ec:
+    description: Enderchest
+  gm1:
+    description: Creative
+  gm0:
+    description: Survival
+  gm3:
+    description: Spectator
+
+
+
+
 
 
 
