@@ -1,0 +1,24 @@
+##########################
+#         SetHome        #
+##########################
+# Author: GhostAdmin
+# Version: 1.0
+
+# For support: https://discord.gg/7sVwSupRC3
+
+# Customize the menu.
+menu:
+  open-command: /home
+
+  gui-title: "&9&lHome Menu &8
+
+  info-title: "&8&7Set Home &8| &7Go Home &8
+
+  set-home-item: "&7&3Set Home"
+  travel-home-item: "&7&bTravel Home"
+
+# Customize the messages.
+messages:
+  home-established: "§a[§cGhostSystem§a] Du hast dein Home erstellt."
+  not-established-home: "§a[§cGhostSystem§a] Du hast noch kein Home erstellt."
+  teleported: "§a[§cGhostSystem§a] Du hast dich zu deinem Home Teleportiert"

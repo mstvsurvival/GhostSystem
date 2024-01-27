@@ -7,10 +7,6 @@ commands:
     permission: ghostsys.meinschwert
   adminitems:
     permission: ghostsys.adminitems
-  home:
-    permission: ghostsys.homeport
-  sethome:
-    permission: ghostsys.sethome
   heal:
     description: Heilt Spieler
   clearchat:
@@ -32,6 +28,9 @@ commands:
     description: Survival
   gm3:
     description: Spectator
+  warp:
+    description: Warps
+    permission: ghostsys.warp.manage
 
 
 
