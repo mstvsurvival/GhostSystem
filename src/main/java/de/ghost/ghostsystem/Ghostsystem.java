@@ -3,7 +3,6 @@ package de.ghost.ghostsystem;
 
 
 import com.google.gson.JsonObject;
-import de.ghost.ghostsystem.BanSystem.BanCommand;
 import de.ghost.ghostsystem.Economy.EconomySystem;
 import de.ghost.ghostsystem.Listerners.ConnectionListeners;
 import de.ghost.ghostsystem.Sethome.HomeCommand;
@@ -64,7 +63,6 @@ public class Ghostsystem extends JavaPlugin {
         getCommand("sethome").setExecutor(new SethomeCommand());
         getCommand("support").setExecutor(new SupportCommand());
         getCommand("msg").setExecutor(new MSGCommand());
-        getCommand("ban").setExecutor(new BanCommand());
 
 
 
