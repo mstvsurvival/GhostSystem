@@ -1,7 +1,6 @@
 package de.ghost.ghostsystem.Listerners;
 
 import de.ghost.ghostsystem.Ghostsystem;
-import de.ghost.ghostsystem.Scoreboard.TestScoreboard;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,7 +14,6 @@ public class ConnectionListeners implements Listener {
     public void onJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         event.setJoinMessage(ChatColor.DARK_GRAY + "[+] " + ChatColor.YELLOW + player.getName());
-        new TestScoreboard(player);
         Ghostsystem.getInstance().sendDiscord(event.getPlayer().getName() + " hat den Server betreten");
     }
 

@@ -3,7 +3,11 @@ package de.ghost.ghostsystem;
 
 
 import com.google.gson.JsonObject;
+import de.ghost.ghostsystem.BanSystem.BanCommand;
+import de.ghost.ghostsystem.Economy.EconomySystem;
 import de.ghost.ghostsystem.Listerners.ConnectionListeners;
+import de.ghost.ghostsystem.Sethome.HomeCommand;
+import de.ghost.ghostsystem.Sethome.SethomeCommand;
 import de.ghost.ghostsystem.WarpSystem.Config;
 import de.ghost.ghostsystem.WarpSystem.WarpCommand;
 import de.ghost.ghostsystem.commands.*;
@@ -12,9 +16,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import javax.net.ssl.HttpsURLConnection;
-import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
@@ -40,6 +42,9 @@ public class Ghostsystem extends JavaPlugin {
         instance = this;
         cfg = new Config("warps.yml", getDataFolder());
 
+
+
+
         getCommand("meinschwert").setExecutor(new MeinSchwert());
         getCommand("adminitems").setExecutor(new AdminItemsCommand());
         getCommand("heal").setExecutor(new HealCommand());
@@ -53,6 +58,13 @@ public class Ghostsystem extends JavaPlugin {
         getCommand("gm0").setExecutor(new GamemodeSurvivalCommand());
         getCommand("gm3").setExecutor(new GamemodeSpectatorCommand());
         getCommand("warp").setExecutor(new WarpCommand());
+        getCommand("money").setExecutor(new EconomySystem());
+        getCommand("teleport").setExecutor(new TeleportCommand());
+        getCommand("home").setExecutor(new HomeCommand());
+        getCommand("sethome").setExecutor(new SethomeCommand());
+        getCommand("support").setExecutor(new SupportCommand());
+        getCommand("msg").setExecutor(new MSGCommand());
+        getCommand("ban").setExecutor(new BanCommand());
 
 
 
@@ -97,6 +109,8 @@ public class Ghostsystem extends JavaPlugin {
             throw new RuntimeException(e);
         }
     }
+
+
 
 }
 
