@@ -49,7 +49,7 @@ public class EconomySystem implements CommandExecutor {
             player.sendMessage("§a[§cGhostSystem§a] Money vom Spieler§c " + targetPlayerName + " §aauf§c " + amount + " §agesetzt.");
         } else if (args[0].equalsIgnoreCase("add")) {
             addMoney(targetPlayerName, amount);
-            player.sendMessage("§a[§cGhostSystem§a]§c" + amount + " §awurde dem Spieler§c " + targetPlayerName + "§ahinzugefügt.");
+            player.sendMessage("§a[§cGhostSystem§a]§c " + amount + " §awurde dem Spieler§c " + targetPlayerName + "§ahinzugefügt.");
         } else if (args[0].equalsIgnoreCase("take")) {
             takeMoney(targetPlayerName, amount);
             player.sendMessage("§a[§cGhostSystem§a] Du hast " + amount + " von dem Spieler " + targetPlayerName + "bekommen.");

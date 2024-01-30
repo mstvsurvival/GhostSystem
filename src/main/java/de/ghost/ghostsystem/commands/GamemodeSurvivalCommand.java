@@ -17,14 +17,14 @@ public class GamemodeSurvivalCommand implements CommandExecutor {
                 if (args.length == 0) {
                     p.setGameMode(GameMode.SURVIVAL);
                     p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 5, 5);
-                    p.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Creative gesetzt");
+                    p.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Survival gesetzt");
                 } else {
                     if (args.length == 1) {
                         if (p.hasPermission("ghostsys.gm1.other")) {
                             Player target = Bukkit.getPlayer(args[0]);
                             target.setGameMode(GameMode.SURVIVAL);
-                            target.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Creative gesetzt");
-                            p.sendMessage("§a[§cGhostSystem§a] Du hast den Spieler in Creative gesetzt");
+                            target.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Survival gesetzt");
+                            p.sendMessage("§a[§cGhostSystem§a] Du hast den Spieler in Survival gesetzt");
                             p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 5, 5);
                         }
                     } else {

@@ -45,6 +45,11 @@ commands:
     description: chatte mit anderen Spielern
   ban:
     description: banne einen Spieler
+  report:
+    description: Reporte einen Spieler
+  permission:
+    description: Gebe Rechte
+
 
 
 

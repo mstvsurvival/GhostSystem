@@ -5,6 +5,7 @@ package de.ghost.ghostsystem;
 import com.google.gson.JsonObject;
 import de.ghost.ghostsystem.Economy.EconomySystem;
 import de.ghost.ghostsystem.Listerners.ConnectionListeners;
+import de.ghost.ghostsystem.PermissionSystem.PermissionCommand;
 import de.ghost.ghostsystem.Sethome.HomeCommand;
 import de.ghost.ghostsystem.Sethome.SethomeCommand;
 import de.ghost.ghostsystem.WarpSystem.Config;
@@ -13,23 +14,33 @@ import de.ghost.ghostsystem.commands.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.lang.reflect.Array;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 
 public class Ghostsystem extends JavaPlugin {
     private static Ghostsystem instance;
     private static Config cfg;
     private URL url;
+    public static String prefix = "§a[§cGhostSystem§a]";
 
 
 
     ConsoleCommandSender console = Bukkit.getConsoleSender();
+
+    public static Plugin getPlugin() {
+        return null;
+    }
+
     @Override
     public void onEnable() {
         try {
@@ -40,8 +51,7 @@ public class Ghostsystem extends JavaPlugin {
 
         instance = this;
         cfg = new Config("warps.yml", getDataFolder());
-
-
+        saveConfig();
 
 
         getCommand("meinschwert").setExecutor(new MeinSchwert());
@@ -63,6 +73,9 @@ public class Ghostsystem extends JavaPlugin {
         getCommand("sethome").setExecutor(new SethomeCommand());
         getCommand("support").setExecutor(new SupportCommand());
         getCommand("msg").setExecutor(new MSGCommand());
+        getCommand("report").setExecutor(new ReportCommand());
+        getCommand("report").setTabCompleter(new ReportCommand());
+        getCommand("permission").setExecutor(new PermissionCommand(this));
 
 
 
@@ -107,8 +120,13 @@ public class Ghostsystem extends JavaPlugin {
             throw new RuntimeException(e);
         }
     }
-
-
+    public ArrayList<String> getPermission(Player player) {
+        ArrayList<String> permissions = new ArrayList<>();
+        if (getConfig().contains(player.getUniqueId().toString() + ".permissions")) {
+            permissions = (ArrayList<String>) getConfig().getStringList(player.getUniqueId().toString() + ".permissions");
+        }
+        return permissions;
+    }
 
 }
 

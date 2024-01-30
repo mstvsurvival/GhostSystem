@@ -17,14 +17,14 @@ public class GamemodeSpectatorCommand implements CommandExecutor {
                 if (args.length == 0) {
                     p.setGameMode(GameMode.SPECTATOR);
                     p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 5, 5);
-                    p.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Creative gesetzt");
+                    p.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Spectator gesetzt");
                 } else {
                     if (args.length == 1) {
                         if (p.hasPermission("ghostsys.gm1.other")) {
                             Player target = Bukkit.getPlayer(args[0]);
                             target.setGameMode(GameMode.SPECTATOR);
-                            target.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Creative gesetzt");
-                            p.sendMessage("§a[§cGhostSystem§a] Du hast den Spieler in Creative gesetzt");
+                            target.sendMessage("§a[§cGhostSystem§a] Dein Gamemode wurde auf Spectator gesetzt");
+                            p.sendMessage("§a[§cGhostSystem§a] Du hast den Spieler in Spectator gesetzt");
                             p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 5, 5);
                         }
                     } else {
